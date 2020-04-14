@@ -24,9 +24,11 @@ github_username: michorvath
 
 # Build settings
 incremental: true
-#markdown: kramdown
-#plugins:
-#  - jekyll-feed
+sass:
+    style: compressed
+markdown: kramdown
+plugins:
+  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

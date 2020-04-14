@@ -6,7 +6,7 @@ title: Home - MicHorvath.com
 layout: default
 ---
 
-<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/index.css">
 <div id="body-content-wrapper">
     <section id="main-image-container" class="b-lazy" data-srcset="assets/media/main-bg-lowres.jpg 1024w" data-src="assets/media/main-bg.jpg">
         <div>
