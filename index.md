@@ -1,12 +1,10 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 title: Home - MicHorvath.com
 layout: default
 ---
 
 <link rel="stylesheet" type="text/css" href="/assets/css/index.css">
+{% include navigation.md %}
 <div id="body-content-wrapper">
     <section id="main-image-container" class="b-lazy" data-srcset="assets/media/main-bg-lowres.jpg 1024w" data-src="assets/media/main-bg.jpg">
         <div>
@@ -161,4 +159,5 @@ layout: default
 </div>
 <script src="/assets/js/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
 <script src="/assets/js/blazy.min.js" type="text/javascript"></script>
-<script src="/assets/js/main.js" type="text/javascript"></script>
+<script src="/assets/js/core.js" type="text/javascript"></script>
+<script src="/assets/js/index.js" type="text/javascript"></script>

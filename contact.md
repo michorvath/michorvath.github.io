@@ -1,0 +1,47 @@
+---
+title: Contact Me - MicHorvath.com
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="/assets/css/contact.css">
+{% include navigation.md %}
+<div class="center-center-wrapper">
+    <div class="center-center-container">
+        <form id="contact-form">
+            <h1>Contact Me</h1><br/>
+
+            <div class="form-field required hide-required-text w-100">
+                <label for="clue">Your Name:</label>
+                <div class="input">
+                    <input type="text" name="name"/>
+                </div>
+            </div>
+
+            <div class="form-field required hide-required-text w-100">
+                <label for="clue">Your Email:</label>
+                <div class="input">
+                    <input type="email" name="email"/>
+                </div>
+            </div>
+
+            <div class="form-field required hide-required-text w-100">
+                <label for="clue">Message:</label>
+                <div class="input">
+                    <textarea name="message"></textarea>
+                </div>
+            </div>
+
+            <br/>
+            <div class="flag-wrapper w-100"></div>
+            <br/>
+
+            <button id="contact-submit-btn" type="button" class="btn round primary expand js-ripple" disabled>
+                <span class="text">Submit</span>
+                <span class="spinner"></span>
+            </button>
+        </form>
+    </div>
+</div>
+<script src="/assets/js/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/js/core.js" type="text/javascript"></script>
+<script src="/assets/js/contact.js" type="text/javascript"></script>

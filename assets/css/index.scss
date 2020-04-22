@@ -253,6 +253,14 @@ footer {
     padding: 2em 0;
 }
 
+#main-navigation #toggle-wrapper:not(.solid) .burger-icon > div {
+    background-color: white; /* override the default */
+}
+
+#main-navigation #toggle-wrapper:not(.solid) .burger-icon:after {
+    background-color: white; /* override the default */
+}
+
 @media only screen and (max-width: 768px) {
     .history-of-mic-container {
         width: 80%;

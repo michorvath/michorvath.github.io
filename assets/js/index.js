@@ -236,6 +236,8 @@ if (!Array.prototype.filter) {
                     //loop over conditionals
                     boundProperties[targetId].conditionals.forEach(function(condition) {
                         var conditionParts = condition.toLowerCase().replace(/to|than|class|css/g, '').replace(/\s+(?=(?:(?:[^"]*"){2})*[^"]*"[^"]*$)|\s+(?=(?:(?:[^']*'){2})*[^']*'[^']*$)/g, '%20').split(' ').filter(function(val) { return !!val; });
+
+                        conditionParts[1] = parseStartEndPos(conditionParts[1]);
                         if (isNaN(conditionParts[1])) {
                             return; //condition must be numeric scroll eval
                         }
@@ -362,6 +364,7 @@ if (!Array.prototype.filter) {
     sp.bindCondition('#main-image-container .logo', 'greater than 3000 add class final');
     sp.bindProperty('#timeline-container .history-of-mic-container', 'opacity', 0, 1, '', '3000px+100vh-100px', '3000px+100vh+250px', 'outQuad');
     sp.bindProperty('#timeline-container .history-of-mic-container', 'transform', 50, 0, 'translateX($px)', '3000px+100vh-100px', '3000px+100vh+250px', 'outQuad');
+    sp.bindCondition('#main-navigation #toggle-wrapper', 'greater than 3000px+100vh-76px add class solid');
 
     var raf = window.requestAnimationFrame ||
         window.webkitRequestAnimationFrame ||
