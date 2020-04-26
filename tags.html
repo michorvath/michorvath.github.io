@@ -1,0 +1,25 @@
+---
+title: Tags - MicHorvath.com
+layout: blog
+---
+
+<h1>Tags</h1>
+{% capture tags %}
+    {% for tag in site.tags %}
+        {% if tag[1].size > 0 and tag[0] != false %}
+            {{ tag[0] }}
+        {% endif %}
+    {% endfor %}
+{% endcapture %}
+{% assign sortedtags = tags | split:' ' | sort %}
+
+{% for tag in sortedtags %}
+    <h3 id="{{ tag }}">{{ tag }}</h3>
+    <ul>
+        {% for post in site.tags[tag] %}
+            <li>
+                {% include post-date.md %}: <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+    </ul><br/>
+{% endfor %}

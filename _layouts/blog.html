@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="/assets/css/blog.css">
+{% include navigation.md %}
+<div class="center-center-wrapper">
+    <div class="center-center-container">
+        <div class="blog-body">
+            <div class="group">
+                <div class="post-column">
+                    {{ content }}
+                </div>
+                <div class="info-column">
+                    <div class="panel">
+                        <div class="profile-pic"></div>
+                        <h3>About Me</h3>
+                        Hi! I'm Mic Horvath and you've stumbled onto my website.<br/><br/>I am a {% assign currentYear = 'now' | date: "%Y" %}{{ currentYear | minus: 1995 }} year old fullstack software engineer from Ohio (although I primarily do web dev these days). For the most part I will be posting about projects that I have or am currently working on, but I might share a few "bloggy" type things along the way.
+                    </div>
+
+                    <div class="panel">
+                        <h3>Tags</h3>
+
+                        <ul class="tags-list">
+                            {% capture tags %}
+                                {% for tag in site.tags %}
+                                    {{ tag[0] }}#{{ tag[1].size }}
+                                {% endfor %}
+                            {% endcapture %}
+                            {% assign sortedtags = tags | split:' ' | sort %}
+                            {% for tag in sortedtags %}
+                                {% assign tagitems = tag | split: '#' %}
+                                {% if tagitems[0] != false %}
+                                <li><a href="/tags#{{ tagitems[0] }}">{{ tagitems[0] }} ({{ tagitems[1] }})</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            {% include footer.md %}
+        </div>
+    </div>
+</div>
+<script id="dsq-count-scr" src="//michorvath.disqus.com/count.js" async></script>

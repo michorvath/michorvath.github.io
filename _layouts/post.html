@@ -1,3 +1,47 @@
 ---
 layout: default
 ---
+
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5ea077b9d716680012d494ff&product=inline-share-buttons" async="async"></script>
+<link rel="stylesheet" type="text/css" href="/assets/css/post.css">
+{% include navigation.md %}
+<div class="center-center-wrapper">
+    <div class="center-center-container">
+        <div class="post-body">
+            {% if page.image %}
+            <div class="header-image" style="background-image: url(/assets/media/posts/{{ page.image }});"></div>
+            {% endif %}
+            <div class="header-details">
+                <h1 class="no-margin-bottom">{{ page.title }}</h1>
+                <span class="note">
+                    <i class="far fa-calendar" title="Date posted"></i>{% assign d = page.date | date: "%-d" %}{{ page.date | date: "%B" }} {% case d %}{% when "1" or "21" or "31" %}{{ d }}st{% when "2" or "22" %}{{ d }}nd{% when "3" or "23" %}{{ d }}rd{% else %}{{ d }}th{% endcase %}, {{ page.date | date: "%Y" }}<br/>
+                    {% if page.tags.size > 0 %}
+                    <i class="far fa-tags" title="Tags"></i>{% assign currentTag = 1 %}{% for tag in page.tags %}<a href="/tags#{{ tag }}">{{ tag }}</a>{% if currentTag < page.tags.size %}, {% endif %}{% assign currentTag = currentTag | plus: 1 %}{% endfor %}
+                    {% endif %}
+                </span>
+            </div>
+            <hr/><br/>
+            <div class="sharethis-inline-share-buttons"></div>
+            <br/><hr/>
+            {{ content }}
+            {% include related.md %}
+            <br/><hr class="color"/><br/>
+            <h3>Comments</h3>
+            {% include disqus.md %}
+            <br/><br/>
+            <div class="btn-wrapper prev-next-btns">
+                <div>
+                    {% if page.previous.url %}
+                    <a href="{{ page.previous.url }}" title="Go to {{ page.previous.title }}"><button class="btn js-ripple"><i class="far fa-chevron-double-left"></i> Previous</button></a>
+                    {% endif %}
+                </div>
+                <div>
+                    {% if page.next.url %}
+                    <a href="{{ page.next.url }}" title="Go to {{ page.next.title }}"><button class="btn js-ripple">Next <i class="far fa-chevron-double-right"></i></button></a>
+                    {% endif %}
+                </div>
+            </div>
+            {% include footer.md %}
+        </div>
+    </div>
+</div>

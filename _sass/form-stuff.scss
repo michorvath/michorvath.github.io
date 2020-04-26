@@ -1,4 +1,26 @@
-.btn-wrapper { width: 100%; }
+.btn-wrapper {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.btn-wrapper button,
+.btn-wrapper [type="button"] {
+    margin: 0;
+}
+
+.btn-wrapper > div {
+    display: table-cell;
+    text-align: center;
+}
+
+.btn-wrapper > div:last-child {
+    text-align: right;
+}
+
+.btn-wrapper > div:first-child {
+    text-align: left;
+}
 
 .btn,
 .btn-o {

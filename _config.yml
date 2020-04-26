@@ -18,12 +18,14 @@ title: MicHorvath.com
 email: aaahh@michorvath.com
 description: >- # this means to ignore newlines until "baseurl:"
   The online home of Mic Horvath.
+permalink: /blog/:categories/:year/:month/:day/:title:output_ext
+excerpt_separator: <!--more-->
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://michorvath.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: michorvath
 
 # Build settings
-incremental: true
+#incremental: true
 sass:
     style: compressed
 markdown: kramdown

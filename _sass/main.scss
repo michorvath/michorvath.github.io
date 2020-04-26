@@ -81,12 +81,17 @@ h1, h2, h3, h4, h5, h6 {
 hr {
     height: 2px;
     margin: 0;
-    width: 6em;
+    width: 100%;
     border: 0;
     text-align: left;
+    color: #EDEDED;
+    background: #EDEDED;
+    border-radius: 99em;
+}
+
+hr.color {
     color: #9F529F;
     background: #9F529F;
-    border-radius: 99em;
 }
 
 ul, ol {
@@ -204,6 +209,10 @@ button, input, select, textarea { overflow: visible; }
     left: 0;
     right: 0;
 }
+.note {
+    font-size: .85em;
+    color: #BABABA;
+}
 
 .group:before,
 .group:after {
@@ -245,4 +254,17 @@ svg.icon {
     height: 100%;
     vertical-align: middle;
     padding: 3em 0;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 2em 0;
+    font-size: 14pt;
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        font-size: 12pt;
+    }
 }

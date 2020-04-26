@@ -247,12 +247,6 @@
     margin: 25vh auto 25vh auto;
 }
 
-footer {
-    width: 100%;
-    text-align: center;
-    padding: 2em 0;
-}
-
 #main-navigation #toggle-wrapper:not(.solid) .burger-icon > div {
     background-color: white; /* override the default */
 }
@@ -288,10 +282,6 @@ footer {
     }
 
     .scroll-down {
-        font-size: .8em;
-    }
-
-    footer {
         font-size: .8em;
     }
 }
