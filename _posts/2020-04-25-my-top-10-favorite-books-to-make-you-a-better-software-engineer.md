@@ -1,5 +1,5 @@
 ---
-title: My top 10 favorite books to make you a better software engineer
+title: My top 10 favorite books to help you design and engineer better products
 layout: post
 image: article-one-header.jpg
 tags: [top-10, general]
@@ -7,7 +7,7 @@ tags: [top-10, general]
 
 Genesis 1. The first post. Enviar uno. Whatever you want to call it, this is my first contribution to my new personal site/blog. For the most part, I will be using this website as an online resumé of sorts, and this blog as a showcase of my projects both past and present.<!--more--> I'm not much of a personality and don't believe I have much to say, so in the interest of brevity, I will try to keep the general "content creator"-esque off-topic posts like this to a minimum.
 
-Since you have managed to find yourself here, I assume you are interested some new reading recommendations; without further ado and in no particular order, my top 10 books to make you a better software engineer (please note that these books are my personal favorites and heavily pertain to both programming, web development, design, and SE as a business... not just hardcore dev stuff, sorry 😐):
+Since you have managed to find yourself here, I assume you are interested some new reading recommendations; without further ado and in no particular order, my top 10 books to help you design and engineer better products (please note that these books are my personal favorites and heavily pertain to not only programming but also web development, design, and SE as a business... they aren't limited to only hardcore dev stuff, sorry 😐):
 
 <br/>
 ### Clean Code by Robert Cecil Martin
@@ -31,7 +31,7 @@ An engaging fresh dive into the wonderful albeit rapidly evolving world of user 
 ### Blue Ocean Strategy by Renée Mauborgne and W. Chan Kim
 While not technically a book about software engineering or even design, Blue Ocean Strategy is an incredible book about creating innovative businesses, which can easily be applied to technology start-ups if that is your thing (it is mine). While the premise of the book seems trivial if explained in a lackluster two to three sentences, the concept of blue vs red oceans will change the way you approach creating new projects, or at the very least, the way you plan on making money with your projects.
 
-So many technology start-ups seem so similar these days and the seemingly successful ones often find themselves chasing each other's tails trying to outdo one another while there is a better way. The proposition of Blue Ocean Strategy is all about navigating your business through the fresh and profitable waters of unpoached markets without wasting your time sitting around trying to think of things that do not currently exist. Ultimately, it is a new way of thinking about existing markets and discovering untapped potential. I know it sounds like a generic business book, but it is a solid read and while it won't make you the next Musk or Zuckerburg, you will definitely take away a few concepts to improve your business strategy.
+So many technology start-ups seem so similar these days and the seemingly successful ones often find themselves chasing each other's tails trying to outdo one another while there is a better way. The proposition of Blue Ocean Strategy is all about navigating your business through the fresh and profitable waters of unpoached markets without wasting your time sitting around trying to think of things that do not currently exist. Ultimately, it is a new way of thinking about existing markets and discovering untapped potential. I know it sounds like a generic business book, but it is a solid read and while it won't make you the next Musk or Zuckerberg, you will definitely take away a few concepts to improve your business strategy.
 
 <br/>
 ### The Design of Everyday Things by Don Norman
