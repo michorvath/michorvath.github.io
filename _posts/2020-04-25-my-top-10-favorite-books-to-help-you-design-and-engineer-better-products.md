@@ -1,7 +1,7 @@
 ---
 title: My top 10 favorite books to help you design and engineer better products
 layout: post
-image: article-one-header.jpg
+image: my-top-10-favorite-books-to-help-you-design-and-engineer-better-products/header.jpg
 tags: [top-10, general]
 ---
 
