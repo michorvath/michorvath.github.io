@@ -151,7 +151,7 @@ function clamp(num, min, max) {
     return num <= min ? min : num >= max ? max : num;
 }
 
-function parallaxIt(route, e, target, movement, offset, max) {
+function parallaxIt(route, e, target, movement, offset, max, clipToParent) {
     if (!(route instanceof jQuery)) {
         route = $(route);
     }
@@ -165,8 +165,31 @@ function parallaxIt(route, e, target, movement, offset, max) {
         x = width*-(offset/100)+(relX-width/2)/width*movement,
         y = height*-(offset/100)+(relY-height/2)/height*movement;
 
-    TweenMax.to(target, 1, {
-        x: max ? clamp(x, max*-1, max) : x,
-        y: max ? clamp(y, max*-1, max) : y
-    });
+    x = max ? clamp(x, max*-1, max) : x;
+    y = max ? clamp(y, max*-1, max) : y;
+
+    if (clipToParent) {
+        //keep within the bounds of the parent
+
+        var targetEl = $(target),
+            parent = targetEl.parent();
+
+        if (targetEl.offset().left > 0) {
+            x = 0;
+        }
+
+        if (x < 0 && targetEl.width()+x < parent.width()) {
+            x = (targetEl.width()-parent.width())*-1;
+        }
+
+        if (targetEl.offset().top > 0) {
+            y = 0;
+        }
+
+        if (y < 0 && targetEl.height()+y < parent.height()) {
+            y = (targetEl.height()-parent.height())*-1;
+        }
+    }
+
+    TweenMax.to(target, 1, {x: x, y: y});
 }

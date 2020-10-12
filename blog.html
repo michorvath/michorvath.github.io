@@ -6,14 +6,16 @@ layout: blog
 <ul class="posts-list">
     {% for post in site.posts %}
     <li>
-        <div>
+        <div class="post">
             {% if post.image %}
             <a href="{{ post.url }}"><div class="header-image" style="background-image: url(/assets/media/posts/{{ post.image }});"></div></a>
             {% endif %}
-            <span class="note"><i class="far fa-calendar" title="Date posted"></i> {% include post-date.md %}</span><br/>
-            <a href="{{ post.url }}"><h1>{{ post.title}}</h1></a>
-            <p>{{ post.excerpt }}</p>
-            <i class="far fa-comments-alt"></i> <a href="https://michorvath.com{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">0 Comments</a>
+            <div class="post-content">
+                <span class="note"><i class="far fa-calendar" title="Date posted"></i> {% include post-date.md %}</span><br/>
+                <a href="{{ post.url }}"><h1>{{ post.title}}</h1></a>
+                <p>{{ post.excerpt }}</p>
+                <i class="far fa-comments-alt"></i> <a href="https://michorvath.com{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">0 Comments</a>
+            </div>
         </div>
     </li>
     {% endfor %}

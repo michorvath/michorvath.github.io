@@ -59,8 +59,8 @@ if (!Array.prototype.filter) {
         lastPageX = e.pageX;
         lastPageY = e.pageY;
 
-        parallaxIt(parallaxImageContainer, e, '#main-image-container .original', -30, 5, 10);
-        parallaxIt(parallaxImageContainer, e, '#main-image-container .desaturated', -30, 5, 10);
+        parallaxIt(parallaxImageContainer, e, '#main-image-container .original', -30, 5, 10, true);
+        parallaxIt(parallaxImageContainer, e, '#main-image-container .desaturated', -30, 5, 10, true);
 
         var movement = $(window).scrollTop()/3000;
         if (movement > 1) {
