@@ -1,4 +1,8 @@
 (function() {
+    $('.center-center-wrapper').mousemove(function(e) {
+        parallaxIt($('.center-center-wrapper'), e, '#contact-form', -50);
+    });
+
     $(document).on('click', '.flag > .close-action', function() {
         $(this).parent().animate({ opacity: 0 }, 250, function() {
             $(this).animate({ marginBottom: 0 }, 250).children().animate({ padding: 0 }, 250).wrapInner('').children().slideUp(250, function() {

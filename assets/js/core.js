@@ -6,25 +6,48 @@
     });
 
     //keep tabbable limited to nav elements if nav is open
-    var inputs = $('[tabindex], a, input, button', '#main-navigation');
-    var firstInput = inputs.first();
-    var lastInput = inputs.last();
+    $(function() {
+        var firstInput = $('#main-navigation .js-toggle-nav'),
+            lastInput = $('#main-navigation ul a').last();
+
+        $('#main-navigation').on('keydown', function(e) {
+            if (e.which === 9) {
+                if (e.shiftKey) /* shift + tab */ {
+                    if (document.activeElement === firstInput[0]) {
+                        lastInput.focus();
+                        e.preventDefault();
+                    }
+                } else /* tab */ {
+                    if (document.activeElement === lastInput[0]) {
+                        firstInput.focus();
+                        e.preventDefault();
+                    }
+                }
+            }
+        });
+    });
 
     /* redirect last tab to first input */
+    /*
     lastInput.on('keydown', function (e) {
+        console.log('last input keydown');
        if ((e.which === 9 && !e.shiftKey)) {
            e.preventDefault();
            firstInput.focus();
        }
     });
+    */
 
     /* redirect first shift+tab to last input */
+    /*
     firstInput.on('keydown', function (e) {
+        console.log('first input keydown');
         if ((e.which === 9 && e.shiftKey)) {
             e.preventDefault();
             lastInput.focus();
         }
     });
+    */
     /* END: NAVIGATION STUFF */
 
     /* START: ELEMENT RIPPLE EFFECT FLOURISH */
@@ -121,3 +144,29 @@
     });
     /* END: HANDLE LABEL FOR CLICKS VIA NAME INSTEAD OF ID */
 })();
+
+//putting utils here for now
+
+function clamp(num, min, max) {
+    return num <= min ? min : num >= max ? max : num;
+}
+
+function parallaxIt(route, e, target, movement, offset, max) {
+    if (!(route instanceof jQuery)) {
+        route = $(route);
+    }
+
+    var width = route.width(),
+        height = route.height(),
+        relX = (e ? e.pageX-route.offset().left : width/2+route.offset().left),
+        relY = (e ? e.pageY-route.offset().top : height/2+route.offset().top),
+        offset = offset || 0,
+        max = max ? width*(max/100) : 0,
+        x = width*-(offset/100)+(relX-width/2)/width*movement,
+        y = height*-(offset/100)+(relY-height/2)/height*movement;
+
+    TweenMax.to(target, 1, {
+        x: max ? clamp(x, max*-1, max) : x,
+        y: max ? clamp(y, max*-1, max) : y
+    });
+}

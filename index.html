@@ -6,11 +6,15 @@ layout: default
 <link rel="stylesheet" type="text/css" href="/assets/css/index.css">
 {% include navigation.md %}
 <div id="body-content-wrapper">
-    <section id="main-image-container" class="b-lazy" data-srcset="assets/media/main-bg-lowres.jpg 1024w" data-src="assets/media/main-bg.jpg">
+    <!-- <section id="main-image-container" class="b-lazy" data-srcset="assets/media/main-bg-lowres.jpg 1024w" data-src="assets/media/main-bg.jpg"> -->
+    <section id="main-image-container">
         <div>
-            <div class="desaturated"></div>
+            <div class="original b-lazy" data-srcset="assets/media/main-bg-lowres.jpg 1024w" data-src="assets/media/main-bg.jpg"></div>
+            <div class="desaturated b-lazy" data-srcset="assets/media/main-bg-bw-lowres.jpg 1024w" data-src="assets/media/main-bg-bw.jpg"></div>
             <div class="color-overlay">
-                <div class="logo"></div>
+                <div class="logo-container">
+                    <div class="logo"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -43,8 +47,8 @@ layout: default
                         April 7th, 2014
                     </div>
                     <div class="item-details">
-                        <div class="item-title">Started a full-stack web development job at <a target="_BLANK" href="https://www.laureninnovations.com">Lauren Innovations</a></div>
-                        <div class="item-description">After building multiple small game projects and switching over the web development, I started a new job at Lauren Innovations working on NaviGate Prepared â€” a web-based emergency preparedness software suite for K-12.<br/><br/>Utilizing a variety of technologies such as but not limited to: PHP, Python, Angular, React.js, Node.js, Web Sockets, PostgreSQL, and Less, I helped develop and maintain a collection of safety-related products with an awesome team.</div>
+                        <div class="item-title">Started a full-stack web development job at <a target="_BLANK" href="https://www.navigate360.com">Lauren Innovations</a></div>
+                        <div class="item-description">After building multiple small game projects and switching over the web development, I started a new job at Lauren Innovations working on NaviGate Prepared, a web-based emergency preparedness software suite for K-12.<br/><br/>Utilizing a variety of technologies such as but not limited to: PHP, Python, Angular, React.js, Node.js, Web Sockets, PostgreSQL, and Less, I helped develop and maintain a collection of safety-related products with an awesome team.</div>
                     </div>
                 </li>
                 <li>

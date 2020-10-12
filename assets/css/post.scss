@@ -84,6 +84,19 @@ body {
         -webkit-box-shadow: none;
         box-shadow: none;
     }
+
+    #main-navigation:not(.open) #toggle-wrapper > div:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -10px;
+        width: 56px;
+        height: 56px;
+        background: url(/assets/media/navigation-icon.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 }
 
 @media only screen and (max-width: 480px) {

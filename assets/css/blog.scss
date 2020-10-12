@@ -126,6 +126,19 @@ body {
         box-shadow: none;
     }
 
+    #main-navigation:not(.open) #toggle-wrapper > div:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -10px;
+        width: 56px;
+        height: 56px;
+        background: url(/assets/media/navigation-icon.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
     .blog-body .post-column {
         margin: 0 0 2em 0;
         float: none;

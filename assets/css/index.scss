@@ -12,10 +12,7 @@
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: url('../media/main-bg-lowres.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 #main-image-container.final {
@@ -29,6 +26,16 @@
     height: 100%;
 }
 
+#main-image-container .original {
+    width: 110%;
+    height: 110%;
+    transform: translateX(-5%) translateY(-5%);
+    background: url('../media/main-bg-lowres.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 #main-image-container .desaturated,
 #main-image-container .color-overlay {
     position: absolute;
@@ -39,11 +46,26 @@
 }
 
 #main-image-container .desaturated {
-    background: url('../media/main-bg-bw.jpg');
+    width: 110%;
+    height: 110%;
+    transform: translateX(-5%) translateY(-5%);
+    background: url('../media/main-bg-bw-lowres.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     opacity: 0;
+}
+
+#main-image-container .logo-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#main-image-container .logo-container.final {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 #main-image-container .logo {
@@ -206,6 +228,15 @@
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+    transition: all 350ms ease-in-out;
+}
+
+.history-of-mic-container > ul li .item-details:not(.in-view) {
+    -webkit-transform: translateX(25%) translateY(-10%) rotate(20deg);
+    -moz-transform: translateX(25%) translateY(-10%) rotate(20deg);
+    transform: translateX(25%) translateY(-10%) rotate(20deg);
+    opacity: 0;
+    filter: blur(4px);
 }
 
 .history-of-mic-container > ul li .item-details img {
