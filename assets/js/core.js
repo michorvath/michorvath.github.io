@@ -27,29 +27,6 @@
         });
     });
 
-    /* redirect last tab to first input */
-    /*
-    lastInput.on('keydown', function (e) {
-        console.log('last input keydown');
-       if ((e.which === 9 && !e.shiftKey)) {
-           e.preventDefault();
-           firstInput.focus();
-       }
-    });
-    */
-
-    /* redirect first shift+tab to last input */
-    /*
-    firstInput.on('keydown', function (e) {
-        console.log('first input keydown');
-        if ((e.which === 9 && e.shiftKey)) {
-            e.preventDefault();
-            lastInput.focus();
-        }
-    });
-    */
-    /* END: NAVIGATION STUFF */
-
     /* START: ELEMENT RIPPLE EFFECT FLOURISH */
     $(document).on('click', '.js-ripple', function(e) {
         var target = $(e.target);

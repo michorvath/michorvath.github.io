@@ -1,4 +1,8 @@
 (function() {
+    if (typeof hljs !== 'undefined') {
+        hljs.initHighlightingOnLoad();
+    }
+
     if ($('.post-header-image').length) {
         var parallaxContainer = $('body');
             lastPageX = parallaxContainer.width()/2+parallaxContainer.offset().left,
