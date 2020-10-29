@@ -8,11 +8,9 @@ I was tasked with building a prototype of a visitor management solution for the 
 
 This article will focus on a single aspect of that goal: improving the picture requirement of the visitor check-in process. Whenever a visitor comes to a school, they must check in to the visitor management system which involves having their picture taken and printed onto a sticker badge. The entire project was to be a kiosk visitors could use themselves, a distributed application most likely installed on a touchscreen all-in-one pc, so I chose to work with Electron.js. While I will be discussing my specific use-case and implementation, these ideas could apply to lots of different projects that require a user to have their picture taken.
 
-<br/>
 ### Defining the project's goals
 I broke down improving the picture requirement into three sub-goals: remove friction, guide users to improve quality, and finally to make it fun. First, to remove friction I aimed to eliminate physical interaction via haptic or interface devices. Next, to guide the users into improving the quality of both the final image and the smoothness of the process, I added feedback through the use of both visual and audio cues. And then to make it fun I sprinkled in some razzle-dazzle by utilizing a sound effect and making their smile literally sparkle.
 
-<br/>
 ### Implementation
 
 #### Smile detection as a trigger
@@ -327,7 +325,6 @@ I found <a href="https://joshwcomeau.com/react/animated-sparkles-in-react/" targ
 
 The mouthBox object is passed to a wrapper component as a prop. I use the coordinates to calculate the responsive percentage position based on the dimensions that were passed to the TinyFace options. The <Sparkles/> component itself is smaller than the parent and centered so the sparkles stay closer to the teeth themselves in the center of the mouthBox area.
 
-<br/>
 ### Conclusion and extra details
 In conclusion, the devil is in the detail. While it seems like a lot of effort to put into something as straightforward as taking the users picture, spending some extra time to make the experience look and feel better than the rest can really pay off in the long run. Visitor management is not a sexy thing from a user's perspective. I would bet money that none of the users who tested my prototype have ever enjoyed checking into a visitor management system or would describe the process as fun. But the feedback was almost completely positive with comments about how fast and easy the process was. They loved the countdown, which is so stupidly simple to add I'm not sure how the preexisting solutions could even overlook it, and the sparkles got their recognition as well.
 

@@ -18,7 +18,6 @@ That is not to say that being functional is not a key component of being highly 
 <br/>
 All of that sounds great, but what does that look like in practice? Here are a few examples of websites, programs, and apps that have zero, one, or two tenets:
 
-<br/>
 ### The Zeros (don't be like these)
 
 #### Jira
@@ -36,7 +35,6 @@ eBay is still the largest online auction site and is able to outperform its nich
 
 Online retailers rarely achieve minimalism, unless of course if they are in a niche market, which Amazon is not. Amazon uses lots of highly technical and expensive systems to combat its lack of usability such as using big data and AI to show you what you want before you even know what you want. However, the site and app both lack consistency and fluidity a lot of times. Amazon also combats these problems with competitive pricing and good habit design.
 
-<br/>
 ### The 1-2's (these are somewhat to mostly usable)
 
 #### Poshmark
@@ -54,7 +52,6 @@ Craigslist? Really?? In the 1-2's? You were probably expecting to see Craigslist
 
 As the grandfather of streaming platforms, Netflix sets the bar for user experience in the mobile streaming industry. The fluidity of the experience when looking for something to watch or interacting with your selection is solid. The visual language of Netflix is minimalistic, even though its content library sometimes overwhelms users. The manner in which the content is presented focuses on tailoring to the user in a way that online retailers have yet to achieve. Consistency on Netflix, however, can be rare as features and layout are constantly evolving with no handholding to aid users' understanding of why the app isn't working the way it previously had, a common complaint within the rapidly-paced streaming industry.
 
-<br/>
 ### And what about the hat-trick? (this should be your goal)
 
 #### Slack, Pinterest, Tinder, and Monday.com
