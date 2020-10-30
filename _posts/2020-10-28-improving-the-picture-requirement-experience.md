@@ -323,7 +323,7 @@ I found <a href="https://joshwcomeau.com/react/animated-sparkles-in-react/" targ
 &lt;/>
 </code></pre>
 
-The mouthBox object is passed to a wrapper component as a prop. I use the coordinates to calculate the responsive percentage position based on the dimensions that were passed to the TinyFace options. The <Sparkles/> component itself is smaller than the parent and centered so the sparkles stay closer to the teeth themselves in the center of the mouthBox area.
+The mouthBox object is passed to a wrapper component as a prop. If the "open" property is true (remember we used the slope of the mouth to determine if the user was smiling), then I use the coordinates to calculate the responsive percentage position based on the dimensions that were passed to the TinyFace options. The <Sparkles/> component itself is smaller than the parent and centered so the sparkles stay closer to the teeth themselves in the center of the mouthBox area.
 
 ### Conclusion and extra details
 In conclusion, the devil is in the detail. While it seems like a lot of effort to put into something as straightforward as taking the users picture, spending some extra time to make the experience look and feel better than the rest can really pay off in the long run. Visitor management is not a sexy thing from a user's perspective. I would bet money that none of the users who tested my prototype have ever enjoyed checking into a visitor management system or would describe the process as fun. But the feedback was almost completely positive with comments about how fast and easy the process was. They loved the countdown, which is so stupidly simple to add I'm not sure how the preexisting solutions could even overlook it, and the sparkles got their recognition as well.
