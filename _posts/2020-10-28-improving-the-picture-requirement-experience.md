@@ -15,7 +15,7 @@ I broke down improving the picture requirement into three sub-goals: remove fric
 
 #### Smile detection as a trigger
 
-![Smile detection](/assets/media/posts/improving-the-picture-requirement-experience/smile-detection.gif)
+![Smile detection]({{ site.url }}/assets/media/posts/improving-the-picture-requirement-experience/smile-detection.gif)
 
 The visitor management application as a whole was designed to work via touch as a kiosk but also to be completely operational in a touchless environment utilizing speech-to-intent with NLP. In pre-existing visitor management solutions, users are prompted to press a button on the screen to take their picture. Any user input adds friction, albeit very slight in this case, to the overall process. I decided to reduce this friction I would prompt the user both textually on the screen and audibly to smile to have their picture taken, at which point the detection of a smile within the frame would engage the action automatically. Some of the competing solutions I tested didn't even offer a countdown in preparation for the picture taking, meaning the user had to position themselves in such a way to hide the fact that they were reaching towards the screen or mouse to take the picture.
 
@@ -176,7 +176,7 @@ I am using a wizard-like stepped process for checking in a visitor, so I not onl
 
 My onPicCountdown function just checks if the picCountdown is greater than zero, and if so, decrements it and sets another timeout for 650 milliseconds. If picCountdown == 0, I set it to null and call a capture function. In my specific Electron/React setup, to capture the image I get the canvas ref with this.canvasRef.current and set checkinData.pic = canvas.toDataURL('image/jpeg', 1.0).
 
-![Face landmarks](/assets/media/posts/improving-the-picture-requirement-experience/landmarks.jpg)
+![Face landmarks]({{ site.url }}/assets/media/posts/improving-the-picture-requirement-experience/landmarks.jpg)
 
 If you aren't using face-api.js and the recognition library or service you have chosen doesn't offer built-in expression detection, you can also detect a smile with mouth landmarks and a simple slope calculation.
 
@@ -222,7 +222,7 @@ getMouthBox(detections.landmarks.getMouth());
 
 #### Guiding the user with visual and audio feedback cues
 
-![Visual guides](/assets/media/posts/improving-the-picture-requirement-experience/visual-guides.gif)
+![Visual guides]({{ site.url }}/assets/media/posts/improving-the-picture-requirement-experience/visual-guides.gif)
 
 It was extremely important to me to make sure that the image that was taken of the user was high quality, meaning they were in the center of the frame and facing the camera. Luckily, I had an advantage over the other visitor management solutions, I already have face landmark coordinates which I can use to force the user to stand where I want them to. This task could be broken down into a few steps: make sure the user is not standing too close or too far away from the camera, make sure they are facing towards the camera, make sure they are horizontally centered in the frame, and indicate all of this to them both visually and audibly.
 
@@ -297,7 +297,7 @@ I also added audio indicators that work in parallel with the colored overlay to 
 
 #### Making the experience stand out
 
-![Mouth sparkles](/assets/media/posts/improving-the-picture-requirement-experience/mouth-sparkles.gif)
+![Mouth sparkles]({{ site.url }}/assets/media/posts/improving-the-picture-requirement-experience/mouth-sparkles.gif)
 
 I experimented with a few different features to make the experience have some extra pizzazz. I added variables that track how long each step is taking a user to complete, whether or not they are getting too many error states, and use the expression results to check if they are frustrated or angry. With those combined, I was able to build an assistance system that automatically tried to help the user if they did happen to experience any issues. The whole check-in process features text-to-speech so the text on the screen is spoken aloud to them, along with undisplayed text such as the picture guidance cues and positive reinforcement. However, the largest and most noticeable of these features was adding an animated sparkling effect to their smile after their picture is taken.
 

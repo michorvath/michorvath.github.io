@@ -109,7 +109,7 @@ app.post('/api/auth', function(req, res) {
 });
 </code></pre>
 
-![Postman sign in success](/assets/media/posts/secure-sign-in-with-jwt-in-distributed-applications/postman-sign-in-success.jpg)
+![Postman sign in success]({{ site.url }}/assets/media/posts/secure-sign-in-with-jwt-in-distributed-applications/postman-sign-in-success.jpg)
 
 Which will result in a token being returned like so, assuming you use the valid login credentials. Using the jsonwebtoken module is pretty straightforward. When generating a token we call jwt.sign() with the payload object, the private key, and finally the options object. One thing to note is that with this specific library we can set certain claims with the options object as I did with the audience. The audience identifies who this token is valid for, so you can send a unique string that identifies the client such as a device id with the request as the X-Client header, and only that client will theoretically be able to decrypt this token. Think of the audience as an added <a href="https://en.wikipedia.org/wiki/Salt_(cryptography)" target="_BLANK">salt</a>.
 
