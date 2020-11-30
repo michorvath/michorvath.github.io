@@ -36,6 +36,19 @@ layout: default
                             {% endfor %}
                         </ul>
                     </div>
+
+                    <form class="newsletter-panel" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=michorvath', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+                        <p>Enter your email address:</p>
+                        <div class="form-field w-90">
+                            <div class="input">
+                                <input type="text" name="email"/>
+                            </div>
+                        </div>
+                        <input type="hidden" value="michorvath" name="uri"/>
+                        <input type="hidden" name="loc" value="en_US"/>
+                        <input type="submit" value="Subscribe" class="btn round"/>
+                        <p>Delivered by <a href="https://feedburner.google.com" target="_blank">FeedBurner</a></p>
+                    </form>
                 </div>
             </div>
 
