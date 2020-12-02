@@ -14,6 +14,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="/blog">Blog</a></li>
+				<li><a href="https://github.com/michorvath" target="_BLANK">GitHub</a></li>
                 <!-- <li><a href="http://mc-map.michorvath.com">Minecraft</a></li> -->
             </ul>
         </div>
