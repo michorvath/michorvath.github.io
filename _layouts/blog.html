@@ -15,7 +15,7 @@ layout: default
                     <div class="panel">
                         <div class="profile-pic"></div>
                         <h3>About Me</h3>
-                        Hi! I'm Mic Horvath and you've stumbled onto my website.<br/><br/>I am a {% assign currentYear = 'now' | date: "%Y" %}{{ currentYear | minus: 1995 }} year old fullstack software engineer from Ohio (although I primarily do web dev these days). For the most part I will be posting about projects that I have or am currently working on, but I might share a few "bloggy" type things along the way.
+                        Hi! I'm Mic Horvath and you've stumbled onto my website.<br/><br/>I am a {% assign currentYear = 'now' | date: "%Y" %}{{ currentYear | minus: 1995 }}-year-old fullstack developer from Ohio (mostly working with web technologies). I am often self-described as a monkey sitting at a piano who doesn't really understand what he is doing but sometimes accidently discovers Mozart, or better yet, the Tommy Wiseau of programming.
                     </div>
 
                     <div class="panel">
@@ -24,16 +24,19 @@ layout: default
                         <ul class="tags-list">
                             {% capture tags %}
                                 {% for tag in site.tags %}
-                                    {{ tag[0] }}#{{ tag[1].size }}
+                                    {{ tag[1].size }}#{{ tag[0] }}
                                 {% endfor %}
                             {% endcapture %}
-                            {% assign sortedtags = tags | split:' ' | sort %}
-                            {% for tag in sortedtags %}
+                            {% assign sortedtags = tags | split:' ' | sort | reverse %}
+                            {% for tag in sortedtags limit:10 %}
                                 {% assign tagitems = tag | split: '#' %}
-                                {% if tagitems[0] != false %}
-                                <li><a href="/tags#{{ tagitems[0] }}">{{ tagitems[0] }} ({{ tagitems[1] }})</a></li>
+                                {% if tagitems[1] != false %}
+                                <li><a href="/tags#{{ tagitems[0] }}">{{ tagitems[1] }} ({{ tagitems[0] }})</a></li>
                                 {% endif %}
                             {% endfor %}
+                            {% if site.tags.size > 10 %}
+                            <li style="text-align: center; font-size: .85em;"><a href="/tags">View All</a></li>
+                            {% endif %}
                         </ul>
                     </div>
 
