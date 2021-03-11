@@ -1,0 +1,8 @@
+To install:
+bundle install
+
+To run:
+bundle exec jekyll serve
+
+To build:
+JEKYLL_ENV=production bundle exec jekyll build
