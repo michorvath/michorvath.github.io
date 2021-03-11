@@ -4,5 +4,5 @@ bundle install
 To run:
 bundle exec jekyll serve
 
-To build:
+To build (handled by Github pages deployment):
 JEKYLL_ENV=production bundle exec jekyll build
