@@ -30,10 +30,10 @@ const Header = ({
 const { pageTitle } = props;
 
     return (
-        <header>
-            <p className="page-title">{ pageTitle }</p>
+        &lt;header>
+            &lt;p className="page-title">{ pageTitle }&lt;/p>
             { ... }
-        </header>
+        &lt;/header>
     );
 }
 </code></pre>
