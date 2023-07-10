@@ -5,8 +5,8 @@ body.nav-open {
 #main-navigation {
     position: fixed;
     width: 100%;
-    height: 150%; //make height have a little overlap for mobile so when the user tries to scroll and the browser shrinks/expands the header nothing 'flashes'
-    top: -25%; //offset the extra height so the navigation is still centered
+    height: 150%; /* make height have a little overlap for mobile so when the user tries to scroll and the browser shrinks/expands the header nothing 'flashes' */
+    top: -25%; /* offset the extra height so the navigation is still centered */
     background-color: transparent;
     pointer-events: none;
     -webkit-transition: background-color 300ms;
@@ -50,6 +50,12 @@ body.nav-open {
 
 #main-navigation ul a {
     color: white !important;
+}
+
+#main-navigation li.deadlink {
+    color: white;
+    opacity: .5;
+    cursor: initial;
 }
 
 #main-navigation #toggle-wrapper {
